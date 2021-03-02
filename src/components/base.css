@@ -31,6 +31,19 @@ a {
   color: currentColor;
 }
 
+.primary-btn {
+  border-radius: 20px;
+  border: none;
+  padding: .6rem;
+  font-size: medium;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(90deg, rgba(70,199,255,1) 0%, rgba(104,230,255,1) 100%);
+}
+
+.primary-btn:hover {
+  transform: scale(1.2);
+}
+
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
@@ -76,4 +89,18 @@ a {
   text-align: center;
   line-height: 1em;
   padding-top: 1rem;
+  color: white;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-img {
+  filter: brightness(50%);
+  height: 60vh;
 }
