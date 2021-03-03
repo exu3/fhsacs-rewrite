@@ -1,5 +1,4 @@
 import React from 'react'
-import heroImg from '../../static/acsrelay.jpg'
 import { Box, Text, Button } from '@chakra-ui/react'
 
 const Hero = () => (

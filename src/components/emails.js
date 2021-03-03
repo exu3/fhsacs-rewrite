@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, Text, Button, Input, FormControl, FormLabel, FormHelperText, ChakraProvider, InputGroup, InputRightElement } from '@chakra-ui/react'
+import { Box, Button, Input, FormControl, FormLabel, FormHelperText, ChakraProvider, InputGroup, InputRightElement } from '@chakra-ui/react'
 
 const Emails = () => (
   <ChakraProvider>
-    <Box bg="gray.100" textAlign="center" p="5" w="60%" mx="auto" borderRadius="lg" p={4}>
+    <Box bg="gray.100" textAlign="center" p="5" w="60%" mx="auto" borderRadius="lg">
         <form>
             <FormControl id="email">
                 <FormLabel>Join our mailing list!</FormLabel>
