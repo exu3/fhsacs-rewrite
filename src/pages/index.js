@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import Emails from '../components/emails'
-import ArticlePreview from '../components/article-preview'
+// import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
   render() {
@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <Emails />
-          <div className="wrapper">
+          {/* <div className="wrapper">
             <h2 className="section-headline">Meeting Updates</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
@@ -30,7 +30,8 @@ class RootIndex extends React.Component {
                 )
               })}
             </ul>
-          </div>
+          </div> */} 
+          {/* recent meetings doesn't look so good on the homepage so moving it elsewhere */}
         </div>
       </Layout>
     )

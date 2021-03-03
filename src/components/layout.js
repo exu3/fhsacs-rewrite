@@ -2,6 +2,7 @@ import React from 'react'
 import './base.css'
 import Container from './container'
 import Navigation from './navigation'
+import Footer from './footer'
 
 class Template extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class Template extends React.Component {
       <Container>
         <Navigation />
         {children}
+        <Footer />
       </Container>
     )
   }

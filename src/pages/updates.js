@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import styles from './blog.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import { ChakraProvider, Text } from '@chakra-ui/react'
 
 class BlogIndex extends React.Component {
   render() {
@@ -12,12 +12,13 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 
     return (
+      <ChakraProvider>
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <div className={styles.hero}>Updates</div>
+          <Text fontSize="lg">Updates</Text>
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
+            <h2 className="section-headline">Past Meetings</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -30,6 +31,7 @@ class BlogIndex extends React.Component {
           </div>
         </div>
       </Layout>
+      </ChakraProvider>
     )
   }
 }
