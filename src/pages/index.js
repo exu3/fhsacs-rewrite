@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
+import Emails from '../components/emails'
 import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -17,6 +18,7 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
+          <Emails />
           <div className="wrapper">
             <h2 className="section-headline">Meeting Updates</h2>
             <ul className="article-list">
