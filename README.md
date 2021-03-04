@@ -8,7 +8,7 @@ Prerequisites-
 3. A text editor
 
 To get started, do the following-
-1. Clone the repo. `git clone `
+1. Clone the repo. `git clone https://github.com/eilla1/foothill-acs.git`
 2. In your terminal, cd into that folder.
     - then do `$ npm install` in your terminal
     - then, `$ npm install -g gatsby-cli`
