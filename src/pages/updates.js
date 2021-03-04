@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
-import { ChakraProvider, Text } from '@chakra-ui/react'
+import { ChakraProvider, Text, Box, Button, Center, Hstack } from '@chakra-ui/react'
 
 class BlogIndex extends React.Component {
   render() {
@@ -13,12 +13,14 @@ class BlogIndex extends React.Component {
 
     return (
       <ChakraProvider>
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+      <Layout>
           <Helmet title={siteTitle} />
-          <Text fontSize="lg">Updates</Text>
-          <div className="wrapper">
-            <h2 className="section-headline">Past Meetings</h2>
+          <Box m={10} mx={20}>
+            <Text fontSize="3xl" fontWeight="bold"> Meeting Updates </Text>
+            <Text>
+              Meeting slides, updates, info will be posted here after hehehehhehehe lakjlakds jfl;ak asldkfj a;ueia fakl;sjdfa;lskf aoweifha;klsdfja;lsfa;oweihfaskldjfha;sdlkf. 
+            </Text>
+            <br />
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -28,8 +30,8 @@ class BlogIndex extends React.Component {
                 )
               })}
             </ul>
-          </div>
-        </div>
+            </Box>
+        
       </Layout>
       </ChakraProvider>
     )
