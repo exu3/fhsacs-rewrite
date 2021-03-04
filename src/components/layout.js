@@ -1,19 +1,19 @@
 import React from 'react'
 import './base.css'
-import Container from './container'
 import Navigation from './navigation'
 import Footer from './footer'
+import { ChakraProvider } from '@chakra-ui/react'
 
 class Template extends React.Component {
   render() {
     const { children } = this.props
 
     return (
-      <Container>
+      <ChakraProvider>
         <Navigation />
         {children}
         <Footer />
-      </Container>
+      </ChakraProvider>
     )
   }
 }
