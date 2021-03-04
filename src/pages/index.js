@@ -1,10 +1,13 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import Emails from '../components/emails'
+import About from '../components/about'
+import '../components/base.css'
+import { ChakraProvider, Text, Box, Button, HStack, Center } from '@chakra-ui/react'
 // import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -14,11 +17,26 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+      <ChakraProvider>
+      <Layout>
+        
           <Helmet title={siteTitle} />
-          <Hero data={author.node} />
+          <Hero />
+          <About />
+
           <Emails />
+          {/* updates and upcoming events buttons*/}
+          <Box m={10} mx={20}>
+            <Text fontSize="3xl" fontWeight="bold"> Learn more </Text>
+            <Text>It is a long established fact that Come to our meetings on Wedensdya at this time. a reader will be distracted by the readable content of a page when looking at its layout.</Text>
+            <br />
+            <Center>
+              <HStack spacing="25px">
+                <Link to="/events"><Button bg="blue.100" className="primary-btn" fontWeight="light" _hover={{ bg: "red.400"}}>Upcoming Events →</Button></Link>
+                <Link to="/updates"><Button border="2px" borderColor="gray.200" bg="white" className="primary-btn" fontWeight="light" _hover={{ bg: "white" }}>Past Meetings → </Button></Link>
+              </HStack>
+            </Center>
+          </Box>
           {/* <div className="wrapper">
             <h2 className="section-headline">Meeting Updates</h2>
             <ul className="article-list">
@@ -32,8 +50,9 @@ class RootIndex extends React.Component {
             </ul>
           </div> */} 
           {/* recent meetings doesn't look so good on the homepage so moving it elsewhere */}
-        </div>
+        
       </Layout>
+      </ChakraProvider>
     )
   }
 }
