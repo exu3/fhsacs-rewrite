@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, Button, Input, FormControl, FormLabel, FormHelperText, ChakraProvider, InputGroup, InputRightElement } from '@chakra-ui/react'
+import { Box, Button, Input, FormControl, FormLabel, FormHelperText, ChakraProvider, InputGroup, HStack } from '@chakra-ui/react'
 
 const Emails = () => (
   <ChakraProvider>
-    <Box bg="gray.100" textAlign="center" p="5" w="60%" mx="auto" borderRadius="lg">
+    <Box bg="white" textAlign="center" p="5" w="60%" mx="auto" borderRadius="lg" borderColor="gray.200" borderWidth={1} boxShadow="md">
         <form>
             <FormControl id="email">
                 <FormLabel>Join our mailing list!</FormLabel>
@@ -12,8 +12,10 @@ const Emails = () => (
                 </FormHelperText><br />
             </FormControl>
             <InputGroup>
-                <Input type="email" placeholder="Email" focusBorderColor="blue.200" isRequired="true" />
-                <InputRightElement children={<Button width={20} type="submit" bg="green.200" _hover={{ bg: "green.300" }}>✓</Button>} />
+            <HStack w="100%">
+                <Input type="email" placeholder="name@example.com" focusBorderColor="blue.200" isRequired="true" w="100%" />
+                <Button width={20} type="submit" bg="green.200" _hover={{ bg: "green.300" }} px={8}> Sign Up </Button>
+            </HStack>
             </InputGroup>
         </form>
         {/* <Button type="submit" _hover={{ bg: "green.300" }}>Submit</Button> */}
