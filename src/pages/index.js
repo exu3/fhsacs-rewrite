@@ -14,7 +14,6 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
       <ChakraProvider>
@@ -28,7 +27,7 @@ class RootIndex extends React.Component {
           {/* updates and upcoming events buttons*/}
           <Box m={10} mx={20}>
             <Text fontSize="3xl" fontWeight="bold"> Learn more </Text>
-            <Text>It is a long established fact that Come to our meetings on Wedensdya at this time. a reader will be distracted by the readable content of a page when looking at its layout.</Text>
+            <Text>We meet biweekly on Wednesdays at 10:30am via <a href="http://tinyurl.com/acsrecurring"><strong>Zoom.</strong></a> Join our mailing list, <a href="https://www.remind.com/join/4hfc2hb"><strong>Remind</strong></a>, or <a href="https://www.facebook.com/groups/475915516547617"><strong>Facebook</strong></a> group to stay up to date on the latest events. Additionally, check out the information from past meetings on our website.</Text>
             <br />
             <Center>
               <HStack spacing="25px">
@@ -76,29 +75,6 @@ export const pageQuery = graphql`
           description {
             childMarkdownRemark {
               html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }

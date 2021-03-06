@@ -18,7 +18,6 @@ const Emails = () => (
             </HStack>
             </InputGroup>
         </form>
-        {/* <Button type="submit" _hover={{ bg: "green.300" }}>Submit</Button> */}
     </Box>
   </ChakraProvider>
 )

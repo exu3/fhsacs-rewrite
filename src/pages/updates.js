@@ -18,7 +18,7 @@ class BlogIndex extends React.Component {
           <Box m={10} mx={20}>
             <Text fontSize="3xl" fontWeight="bold"> Meeting Updates </Text>
             <Text>
-              Meeting slides, updates, info will be posted here after hehehehhehehe lakjlakds jfl;ak asldkfj a;ueia fakl;sjdfa;lskf aoweifha;klsdfja;lsfa;oweihfaskldjfha;sdlkf. 
+              Meeting slides and updates will be posted here after our club meetings biweekly on Wednesdays. If you have any questions, don't hesitate to contact us!
             </Text>
             <br />
             <ul className="article-list">

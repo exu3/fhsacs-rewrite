@@ -36,7 +36,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful starter",
+    title: "Foothill ACS",
+    description: "Official website of the American Cancer Society Club at Foothill High School in Pleasanton, CA."
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [

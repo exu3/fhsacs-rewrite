@@ -6,7 +6,7 @@ const About = () => (
     <Box m={10} mx={20}>
         <Text fontSize="3xl" fontWeight="bold"> Who we are </Text>
         <Text>
-            ACS (American Cancer Society) is a cool club. You should join because we have x and y events that are really cool. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        Foothill ACS is an affiliate of the <a href="https://cancer.org" target="_blank"><strong>American Cancer Society</strong></a>. Our club looks to help aid the mission of creating a cancerless future through volunteering, advocating, fundraising, and raising awareness.
         </Text>
     </Box>
   </ChakraProvider>
