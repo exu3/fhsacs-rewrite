@@ -31,7 +31,7 @@ class RootIndex extends React.Component {
             <br />
             <Center>
               <HStack spacing="25px">
-                <Link to="/events"><Button bg="blue.100" className="primary-btn" fontWeight="light" _hover={{ bg: "red.400"}}>Upcoming Events →</Button></Link>
+                <Link to="/blog/upcoming-events"><Button bg="blue.100" className="primary-btn" fontWeight="light" _hover={{ bg: "red.400"}}>Upcoming Events →</Button></Link>
                 <Link to="/updates"><Button border="2px" borderColor="gray.200" bg="white" className="primary-btn" fontWeight="light" _hover={{ bg: "white" }}>Past Meetings → </Button></Link>
               </HStack>
             </Center>
