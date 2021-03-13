@@ -3,6 +3,7 @@ import './base.css'
 import Navigation from './navigation'
 import Footer from './footer'
 import { ChakraProvider } from '@chakra-ui/react'
+import Head from '../components/head'
 
 class Template extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class Template extends React.Component {
 
     return (
       <ChakraProvider>
+        <Head />
         <Navigation />
         {children}
         <Footer />
