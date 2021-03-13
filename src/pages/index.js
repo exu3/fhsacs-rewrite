@@ -41,34 +41,4 @@ class RootIndex extends React.Component {
   }
 }
 
-<<<<<<< HEAD
 export default RootIndex
-=======
-export default RootIndex
-
-export const pageQuery = graphql`
-  query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-  }
-`
-// idk if we should use the contentful person thing
->>>>>>> bd4df62881f9cb9d6ae2d74c69273dea84112ea7
