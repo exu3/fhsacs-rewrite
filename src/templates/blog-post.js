@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import { ChakraProvider, Text } from "@chakra-ui/react"
 
 import heroStyles from '../components/hero.module.css'
 
@@ -16,22 +17,22 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
+          {/* <div className={heroStyles.hero}>
             <Img
               className={heroStyles.heroImage}
               alt={post.title}
               fluid={post.heroImage.fluid}
             />
-          </div>
+          </div> */}
           <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
+            <Text fontSize="4xl" fontWeight="bold">{post.title}</Text>
             <p
               style={{
                 display: 'block',
               }}
             >
               {post.publishDate}
-            </p>
+            </p><br/>
             <div
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,

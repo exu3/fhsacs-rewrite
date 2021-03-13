@@ -14,9 +14,9 @@ const Footer = () => (
                 <a href="mailto:foothillacs@gmail.com"><FaRegEnvelope size="2em" alt="email" /></a>
                 <a href="https://www.remind.com/join/4hfc2hb"><FiCloudLightning size="2em" alt="remind" /></a>
                 <a href="https://www.facebook.com/groups/475915516547617"><AiOutlineFacebook size="2em" alt="facebook" /></a>
-            </HStack>
-            <Text textAlign="center">Copyright Foothill ACS © 2021</Text>
-            <Text textAlign="center">All Rights Reserved.</Text>
+            </HStack><br/>
+            <Text textAlign="center">Foothill High School ACS.</Text>
+            <Text textAlign="center">Pleasanton, California.</Text>
         </Box>
     </ChakraProvider>
 )

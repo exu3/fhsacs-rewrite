@@ -13,7 +13,6 @@ import { ChakraProvider, Text, Box, Button, HStack, Center } from '@chakra-ui/re
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 
     return (
       <ChakraProvider>
@@ -31,25 +30,11 @@ class RootIndex extends React.Component {
             <br />
             <Center>
               <HStack spacing="25px">
-                <Link to="/events"><Button bg="blue.100" className="primary-btn" fontWeight="light" _hover={{ bg: "red.400"}}>Upcoming Events →</Button></Link>
+                <Link to="/blog/upcoming-events"><Button bg="blue.100" className="primary-btn" fontWeight="light" _hover={{ bg: "red.400"}}>Upcoming Events →</Button></Link>
                 <Link to="/updates"><Button border="2px" borderColor="gray.200" bg="white" className="primary-btn" fontWeight="light" _hover={{ bg: "white" }}>Past Meetings → </Button></Link>
               </HStack>
             </Center>
           </Box>
-          {/* <div className="wrapper">
-            <h2 className="section-headline">Meeting Updates</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div> */} 
-          {/* recent meetings doesn't look so good on the homepage so moving it elsewhere */}
-        
       </Layout>
       </ChakraProvider>
     )
@@ -57,29 +42,3 @@ class RootIndex extends React.Component {
 }
 
 export default RootIndex
-
-export const pageQuery = graphql`
-  query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-  }
-`
-// idk if we should use the contentful person thing
