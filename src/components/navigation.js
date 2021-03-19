@@ -11,6 +11,7 @@ const Navigation = () => (
             <Link to="/">Home</Link>
             <Link to="/blog/upcoming-events">Upcoming Events</Link>
             <Link to="/updates">Meetings</Link>
+            <Link to="/blog/resources">Resources</Link>
             <a href="mailto:foothillacs@gmail.com">Contact</a>
           </HStack>
         </Center>
