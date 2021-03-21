@@ -7,7 +7,8 @@ import Layout from '../components/layout'
 import Emails from '../components/emails'
 import About from '../components/about'
 import '../components/base.css'
-import { ChakraProvider, Text, Box, Button, HStack, Center } from '@chakra-ui/react'
+import Person from '../components/person'
+import { ChakraProvider, Text, Box, Button, HStack, Center, Flex } from '@chakra-ui/react'
 // import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -34,6 +35,20 @@ class RootIndex extends React.Component {
                 <Link to="/updates"><Button border="2px" borderColor="gray.200" bg="white" className="primary-btn" fontWeight="light" _hover={{ bg: "white" }}>Past Meetings → </Button></Link>
               </HStack>
             </Center>
+          </Box>
+          {/** Officers section */}
+          <Box m={10} mx={20}>
+            <Text fontSize="3xl" fontWeight="bold"> Officers</Text>
+            <Flex display="flex" flexDirection="row" flexWrap="wrap" justifyContent="center">
+              <Person name="Emily Lu" role="President" bio="Emily is a junior at Foothill and is also the founder of the ACS club at FHS." src="" />
+              <Person name="Beatricia Lam" role="Treasurer" bio="Beatricia is a junior at Foothill and has been a member of ACS for 2 years." src="" />
+              <Person name="Ellen Huang" role="Secretary" bio="Ellen is a junior at Foothill and has taken part in ACS for 2 years." src="" />
+              <Person name="Saurabi Sakthivel" role="Event Coordinator" bio="Saurabi is a sophomore at Foothill and has taken part in FHS ACS for 2 years." src="" />
+              <Person name="Anrushi Roy" role="Social Media" bio="This person is super cool! ACS is also super cool! Yay, a cool blurb!" src="" />
+              <Person name="Chloe Nguyen" role="Social Media" bio="This person is coajsdlfkja;slfj oia;sldjf a;slkfj cool aldkfja;lskdfj;a lakjdsf;lka." src="" />
+              <Person name="Annalise Mui" role="Website" bio="cool person aldjfl;askdjf ;l;lakjdf; alskjf laksdjf;lkj als;dfj a;lskdfj slf." src="" />
+              <Person name="Ella" role="Website" bio=":((((((ka lskdjf al;skdjf las df;laskjdf;alskjdf asdf jasldf jas." src="" />
+            </Flex>
           </Box>
       </Layout>
       </ChakraProvider>

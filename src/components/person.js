@@ -6,10 +6,9 @@ const Person = ({ pic, name, role, bio, pronouns }) => (
     <ChakraProvider>
               <Box w="30rem" m={5}>
                 <HStack>
-                    <Image src={pic} borderRadius="50%" alt="Heashot" w="8rem" boxShadow="lg" fallbackSrc={FallbackPfp} />
+                    <Image src={pic} borderRadius="50%" alt="Headshot" w="7rem" boxShadow="lg" fallbackSrc={FallbackPfp} />
                     <VStack alignItems="left">
-                      <Text fontSize="lg">{name}</Text>
-                      <Text>{role}</Text>
+                      <Text fontSize="xl"><strong>{name}</strong>, {role}</Text>
                       <Text>{bio}</Text>
                     </VStack>
                 </HStack>
