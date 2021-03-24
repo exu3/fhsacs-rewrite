@@ -44,10 +44,6 @@ class RootIndex extends React.Component {
               <Person name="Beatricia Lam" role="Treasurer" bio="Beatricia is a junior at Foothill and has been a member of ACS for 2 years." src="" />
               <Person name="Ellen Huang" role="Secretary" bio="Ellen is a junior at Foothill and has taken part in ACS for 2 years." src="" />
               <Person name="Saurabi Sakthivel" role="Event Coordinator" bio="Saurabi is a sophomore at Foothill and has taken part in FHS ACS for 2 years." src="" />
-              <Person name="Anrushi Roy" role="Social Media" bio="This person is super cool! ACS is also super cool! Yay, a cool blurb!" src="" />
-              <Person name="Chloe Nguyen" role="Social Media" bio="This person is coajsdlfkja;slfj oia;sldjf a;slkfj cool aldkfja;lskdfj;a lakjdsf;lka." src="" />
-              <Person name="Annalise Mui" role="Website" bio="cool person aldjfl;askdjf ;l;lakjdf; alskjf laksdjf;lkj als;dfj a;lskdfj slf." src="" />
-              <Person name="Ella" role="Website" bio=":((((((ka lskdjf al;skdjf las df;laskjdf;alskjdf asdf jasldf jas." src="" />
             </Flex>
           </Box>
       </Layout>
