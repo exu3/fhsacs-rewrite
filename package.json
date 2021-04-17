@@ -28,7 +28,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "contentful-import": "^7.9.39",
+    "contentful-import": "^8.1.0",
     "netlify-cli": "^2.71.0"
   },
   "engines": {
