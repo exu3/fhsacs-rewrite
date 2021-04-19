@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "contentful-import": "^8.1.0",
-    "netlify-cli": "^2.71.0"
+    "netlify-cli": "^3.18.3"
   },
   "engines": {
     "node": ">=10.13.0"
